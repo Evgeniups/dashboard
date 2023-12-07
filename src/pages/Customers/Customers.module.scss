@@ -1,0 +1,130 @@
+.customers {
+  background-color: #fff;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 15px;
+      align-items: start;
+      margin-bottom: 10px;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      .title {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 0;
+        letter-spacing: -0.22px;
+      }
+      .subtitle {
+        color: #16c098;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.14px;
+      }
+    }
+    .search {
+      width: 216px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: text;
+      :focus {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: url('/search.svg') 0 0 no-repeat;
+        top: 6px;
+        left: 8px;
+      }
+      input {
+        height: 36px;
+        border-radius: 10px;
+        background: #f9fbff;
+        border: none;
+        padding: 7px 8px 7px 40px;
+        outline: none;
+        width: 100%;
+      }
+    }
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+    td {
+      color: #292d32;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.14px;
+      height: 69px;
+    }
+    thead {
+      height: 50px;
+      color: #b5b7c0;
+
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.14px;
+    }
+    tbody {
+    }
+
+    th {
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.14px;
+    }
+  }
+  .table {
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  .cards {
+    display: none;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 14px;
+    @media (max-width: 991px) {
+      display: grid;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+    @media (max-width: 480px) {
+      gap: 10px;
+    }
+    .card {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      padding: 10px;
+      .card-item {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+
+        gap: 10px;
+      }
+    }
+  }
+}

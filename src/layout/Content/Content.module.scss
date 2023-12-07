@@ -1,0 +1,25 @@
+.content {
+  background-color: #fafbff;
+  width: 100%;
+  padding: 41px 71px;
+  @media (max-width: 1200px) {
+    padding: 41px 30px;
+  }
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+  }
+
+  .title {
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 51px;
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 480px) {
+      margin-bottom: 10px;
+    }
+  }
+}
